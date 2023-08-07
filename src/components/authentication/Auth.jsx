@@ -406,7 +406,7 @@ const Auth = () => {
                         label="Confirm Password"
                         name="cpassword"
                         value={cred.cpassword}
-                        onChange={handlePassword}
+                        onChange={handleChange}
                         required
                       />
                     </FormControl>
