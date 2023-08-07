@@ -1,0 +1,94 @@
+.top-heading {
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+.top-heading .Typography.name {
+    font-size: 28px;
+    font-weight: bold;
+    color: #213363;
+}
+
+.top-heading .Typography.id {
+    font-size: 18px;
+    color: #43505a;
+}
+
+.user-image>img {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    box-shadow: 0 10px 40px #43505a3c;
+}
+
+.Typography.title {
+    color: #43505a;
+}
+
+.Typography.len {
+    font-size: 22px;
+    font-weight: bold;
+}
+
+.Grid.pff {
+    cursor: pointer;
+}
+
+.Typography.bio {
+    text-align: justify;
+    margin: 18px 0;
+    font-size: 15px;
+    color: #43505a;
+}
+
+.Tab.tab {
+    width: 50%;
+}
+
+.insta-user-post-image {
+    position: relative;
+}
+
+.insta-user-post-image>img,
+.insta-user-post-image>video {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    cursor: pointer;
+}
+
+.overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    height: 0;
+    overflow-y: hidden;
+    backdrop-filter: blur(6px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.4s;
+}
+
+.insta-user-post-image:hover .overlay {
+    height: 100%;
+}
+
+.text-decoration-none {
+    text-decoration: none;
+}
+
+.Typography.overlay-text {
+    color: #fff;
+    font-weight: bold;
+}
+
+/* @media (max-width:890px) {
+    .overlay {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+} */

@@ -1,0 +1,52 @@
+.Toolbar.nav,
+.header-logo,
+.profile {
+    display: flex;
+    justify-content: space-between;
+}
+
+.Toolbar.nav {
+    background: #fff;
+}
+
+.Typography.logo-name {
+    font-size: 24px;
+    font-weight: bold;
+    margin-left: 10px;
+}
+
+.nav-link {
+    display: inline-block;
+    margin: 0 15px;
+    text-decoration: none;
+}
+
+.profile {
+    align-items: center;
+}
+
+.Typography.logout {
+    margin: 0 8px;
+}
+
+.Menu.profile-menu {
+    margin-top: 45px;
+}
+
+.profile-navlink {
+    text-decoration: none;
+    display: block;
+}
+
+@media (max-width: 890px) {
+    .links {
+        position: fixed;
+        bottom: 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        padding: 10px 0;
+        background: #fff;
+    }
+}
