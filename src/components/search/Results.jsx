@@ -5,7 +5,7 @@ import { Link } from "react-router-dom";
 import { useGlobalContext } from "../../contexts/InstaContext";
 
 const Name = styled(Typography)`
-  font-size: 20px;
+  font-size: 18px;
   color: #322653;
 `;
 
@@ -15,7 +15,7 @@ const ID = styled(Typography)`
 `;
 
 const Card = styled(Grid)`
-  box-shadow: 0 10px 30px #8b92aa65;
+  ${'' /* box-shadow: 0 10px 30px #8b92aa65; */}
   border-radius: 4px;
   cursor: pointer;
 `;
@@ -33,7 +33,11 @@ const Results = ({ users }) => {
           key={_id}
           style={{ textDecoration: "none" }}
         >
-          <Card container alignItems="center" mt={4} p={2}>
+          <Card
+            container
+            alignItems="center"
+            p={2}
+          >
             <Grid item md={1}>
               <Avatar src={profile} alt={name} />
             </Grid>

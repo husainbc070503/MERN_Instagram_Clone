@@ -36,7 +36,7 @@ const LikeModal = ({ likes }) => {
         aria-describedby="modal-modal-description"
       >
         <Box sx={style}>
-          <Typography variant="h4">Liked By</Typography>
+          <Typography variant="h4" mb={3}>Liked By</Typography>
           <div className="modal-users">
             <Results users={likes} />
           </div>
