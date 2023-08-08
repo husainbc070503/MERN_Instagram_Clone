@@ -19,16 +19,15 @@ const style = {
   p: 4,
 };
 
-const FollowersModal = ({ users, id, title, length }) => {
+const LikeModal = ({ likes }) => {
   const [open, setOpen] = React.useState(false);
   const handleOpen = () => setOpen(true);
   const handleClose = () => setOpen(false);
 
   return (
     <div>
-      <Typography className="Typography len">{length}</Typography>
-      <Typography className="Typography title" onClick={handleOpen}>
-        {title}
+      <Typography className="Typography likes" onClick={handleOpen}>
+        {likes?.length} likes
       </Typography>
       <Modal
         open={open}
@@ -37,8 +36,9 @@ const FollowersModal = ({ users, id, title, length }) => {
         aria-describedby="modal-modal-description"
       >
         <Box sx={style}>
+          <Typography variant="h4">Liked By</Typography>
           <div className="modal-users">
-            <Results users={users} />
+            <Results users={likes} />
           </div>
         </Box>
       </Modal>
@@ -46,4 +46,4 @@ const FollowersModal = ({ users, id, title, length }) => {
   );
 };
 
-export default FollowersModal;
+export default LikeModal;

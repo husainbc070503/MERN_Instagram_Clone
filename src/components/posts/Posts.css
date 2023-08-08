@@ -58,6 +58,7 @@
 .Typography.likes {
     font-weight: bold;
     margin: 0 4px;
+    cursor: pointer;
 }
 
 .post-icon {
@@ -146,6 +147,12 @@
 
 .Typography.instaId .text-decoration-none {
     color: #001C30;
+}
+
+.modal-users {
+    width: 100%;
+    height: 480px;
+    overflow-y: scroll;
 }
 
 @media (max-width:890px) {

@@ -14,6 +14,7 @@ import { Link } from "react-router-dom";
 import { toast } from "react-toastify";
 import { api } from "../../utils/Api";
 import { useGlobalContext } from "../../contexts/InstaContext";
+import LikeModal from "./LikeModal";
 
 const PostCard = ({ post }) => {
   const { user } = useGlobalContext();
@@ -283,9 +284,7 @@ const PostCard = ({ post }) => {
           </Grid>
           <Grid item md={6}>
             <div className="post-right-content">
-              <Typography className="Typography likes">
-                {likes?.length} likes
-              </Typography>
+              <LikeModal likes={likes} />
 
               {likes?.find((p) => p._id === user?.user?._id) ? (
                 <FavoriteIcon
