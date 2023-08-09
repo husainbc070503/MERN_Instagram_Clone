@@ -19,8 +19,7 @@ const User = () => {
     useGlobalContext();
   const { id } = useParams();
 
-  const { profile, name, instaId, bio, followers, following, _id } =
-    instaUser;
+  const { profile, name, instaId, bio, followers, following, _id } = instaUser;
 
   const follow = async (id) => {
     try {
@@ -159,26 +158,28 @@ const User = () => {
                 );
               })}
             </Grid>
-            <FormControl fullWidth>
-              {user?.user?.following?.find((u) => u._id === _id) ? (
-                <Button
-                  color="primary"
-                  variant="contained"
-                  className="Button follow"
-                  onClick={() => unfollow(id)}
-                >
-                  Unfollow
-                </Button>
-              ) : (
-                <Button
-                  color="primary"
-                  variant="contained"
-                  onClick={() => follow(id)}
-                >
-                  Follow
-                </Button>
-              )}
-            </FormControl>
+            {Object.keys(instaUser).length > 0 && (
+              <FormControl fullWidth>
+                {user?.user?.following?.find((u) => u._id === _id) ? (
+                  <Button
+                    color="primary"
+                    variant="contained"
+                    className="Button follow"
+                    onClick={() => unfollow(id)}
+                  >
+                    Unfollow
+                  </Button>
+                ) : (
+                  <Button
+                    color="primary"
+                    variant="contained"
+                    onClick={() => follow(id)}
+                  >
+                    Follow
+                  </Button>
+                )}
+              </FormControl>
+            )}
             <Typography className="Typography bio">{bio}</Typography>
           </Grid>
         </Grid>

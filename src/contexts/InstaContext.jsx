@@ -128,7 +128,7 @@ const InstaContext = ({ children }) => {
     getPosts();
     getBookmarks();
     getMyPosts();
-  }, [state.posts, state.user, state.bookmarks, state.myPosts]);
+  }, [state.posts, state.user.user, state.bookmarks, state.myPosts]);
 
   useEffect(() => {
     const instaUser = localStorage.getItem("insta-user");
